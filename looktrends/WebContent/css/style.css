@@ -92,7 +92,8 @@ body {
   z-index: 2;
   bottom: 14px;
   right: 22px;
-  position: fixed; }
+  position: fixed;
+  visibility:hidden; }
   #logo a {
     padding-left: 75px;
     background: url("../images/logo-white.png") left bottom no-repeat;

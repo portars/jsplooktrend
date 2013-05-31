@@ -110,7 +110,13 @@
     this.pane.domElement.style.backgroundColor = this.backgroundColors[this.shown%this.backgroundColors.length];
     this.pane.domElement.style.zIndex = 1;
     this.pane.text.href = 'http://www.google.com/search?q='+encodeURIComponent(str);
-
+    for (var i = 0; i < str.length; i++) {
+      if (isHangul(str.charCodeAt(i))) {
+        this.pane.text.href = 'http://search.daum.net/search?q='+encodeURIComponent(str);
+      }
+    }
+    
+    
     transitionOffset(this.pane.domElement, 0, 0, undefined, 400);
     transitionOffset(this.pane.wrapper, 0, 0, undefined, 1150);
 
